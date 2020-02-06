@@ -93,4 +93,16 @@ public class NumToWord {
 			return "Invalid input";
 		}
 	}
+
+	public static void main(String[] args) {
+		
+		NumToWord numToWord = new NumToWord();
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter a number upto (+/-)999999 to get the value in words");
+		String input = in.nextLine();
+		System.out.println("*** " + numToWord.checkInputAndConvert(input));
+		in.close();
+
+	}
+
 }

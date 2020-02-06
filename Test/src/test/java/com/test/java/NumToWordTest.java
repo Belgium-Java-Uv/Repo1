@@ -66,6 +66,11 @@ public class NumToWordTest {
 	@Test
 	public final void whenValueIsSuppliedWithLeadingOrTrailingSpace() {
 		assertEquals("two", numToWord.checkInputAndConvert(" 2 "));
-
+	}
+	
+	@Test
+	public final void whenEmptyValueOrNullIsSupplied() {
+		assertEquals("Invalid input", numToWord.checkInputAndConvert(""));
+		assertEquals("Invalid input", numToWord.checkInputAndConvert(null));
 	}
 }
