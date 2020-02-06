@@ -18,7 +18,7 @@ public class NumToWord {
 	public String checkInputAndConvert(String strNumber) {
 
 		if (strNumber != null && !strNumber.equals("")) {
-			String pattern = "[0]*";
+			String pattern = "[-+]?[0]*";
 
 			boolean isValidInput = Pattern.matches(pattern, strNumber);
 			if (isValidInput) {
