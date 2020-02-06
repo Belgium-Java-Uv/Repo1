@@ -62,4 +62,10 @@ public class NumToWordTest {
 	public final void whenValueMoreThanMaxLimitIsSupplied() {
 		assertEquals("Invalid input", numToWord.checkInputAndConvert("1000000"));
 	}
+	
+	@Test
+	public final void whenValueIsSuppliedWithLeadingOrTrailingSpace() {
+		assertEquals("two", numToWord.checkInputAndConvert(" 2 "));
+
+	}
 }

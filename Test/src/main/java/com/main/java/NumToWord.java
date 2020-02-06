@@ -80,11 +80,11 @@ public class NumToWord {
 	public String checkInputAndConvert(String strNumber) {
 
 		if (strNumber != null && !strNumber.equals("")) {
-			String pattern = "[-+]?[0]*|[-+]?[0]*[1-9][0-9]{0,5}";
+			String pattern = "[\\s]*[-+]?[0]*[\\s]*|[\\s]*[-+]?[0]*[1-9][0-9]{0,5}[\\s]*";
 
 			boolean isValidInput = Pattern.matches(pattern, strNumber);
 			if (isValidInput) {
-				return convert(strNumber);
+				return convert(strNumber.trim());
 			} else {
 				return "Invalid input";
 			}
